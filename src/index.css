@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "craftr1";
+  src: url("./assets/Fonts/craftr1.woff2");
+}
+@font-face {
+  font-family: "Founders";
+  src: url("./assets/Fonts/Founders.ttf");
+}
+@font-face {
+  font-family: "Neue";
+  src: url("./assets/Fonts/Neue.ttf");
+}
+@font-face {
+  font-family: "craftr4";
+  src: url("./assets/Fonts/craftr4.ttf");
+}
+
+@import "./styles/themes/elegant.css";
+@import "./styles/App/Home/Blob.css";
+@import "./styles/App/Home/ScrollRevealClip.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-craftr1: "craftr1", sans-serif;
+    --font-Founders: "Founders", sans-serif;
+    --font-Neue: "Neue", sans-serif;
+    --font-craftr4: "craftr4", sans-serif;
+    --color-info: var(--color-blue-600);
+    --color-info-fg: var(--color-blue-200);
+    --color-error: var(--color-red-600);
+    --color-error-fg: var(--color-red-200);
+    --color-success: var(--color-green-600);
+    --color-success-fg: var(--color-green-200);
+    --color-warning: var(--color-yellow-600);
+    --color-warning-fg: var(--color-yellow-200);
+    --container-roundness: clamp(1em, 3vw, 1em);
+  }
+  :root.dark {
+    --color-warning: var(--color-yellow-400);
+  }
+
+  body {
+    font-family: var(--font-Neue);
+    background-color: var(--color-paper-fg);
+    color: var(--color-primary);
+    overflow-x: hidden;
+    @apply font-light;
+  }
+}
+
+.container {
+  @apply bg-[var(--color-paper-container)];
+}
+
+@layer components {
+  .error {
+    @apply text-[var(--color-error)] text-xs;
+  }
+  .success {
+    @apply text-[var(--color-success)] text-xs;
+  }
+  .warning {
+    @apply text-[var(--color-warning)] text-xs;
+  }
+}
+
+.move {
+  animation: move 10s linear infinite;
+}
+
+.craftr1 {
+  font-family: var(--font-craftr1);
+}
+
+.Founders {
+  font-family: var(--font-Founders);
+}
+
+.Neue {
+  font-family: var(--font-Neue);
+}
+
+.craftr4 {
+  font-family: var(--font-craftr4);
+}
+
+h1 {
+  font-family: var(--font-craftr1);
+}
+
+button .no-select {
+  @apply select-none;
+}
+
+/* Hide scrollbar globally */
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
