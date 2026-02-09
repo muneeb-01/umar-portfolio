@@ -1,60 +1,54 @@
-import { useRef, useEffect } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-
-gsap.registerPlugin(ScrollTrigger)
-
-export function Footer() {
-  const footerRef = useRef<HTMLDivElement | null>(null)
-
-  useEffect(() => {
-    const footer = footerRef.current
-
-    const trigger = ScrollTrigger.create({
-      trigger: footer,
-      start: "start 50%",
-      end: "start 45%",
-      onEnter: () => {
-        document.documentElement.classList.remove("dark")
-      },
-      onEnterBack: () => {
-        document.documentElement.classList.add("dark")
-      },
-    })
-    return () => {
-      trigger.kill()
-    }
-  })
+import {Button} from "./index" 
+ export function Footer() {
   return (
-    <footer ref={footerRef} className="px-4">
-      <div className="border rounded-t-[var(--container-roundness)] border-b-0 px-8 pt-[5em]">
-        <div className=" py-[9em]">
-          <h1 className="Founders capitalize text-[6rem] sm:text-[10rem] md:text-[14rem] lg:text-[22rem] text-center tracking-tight leading-[0.9]">
-            Let's talk
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div></div>
-            <div className=" flex justify-center items-center">
-              <p className=" text-[0.7rem] sm:text-[0.8rem] md:text-[1.2rem] Neue text-left leading-[0.95]">
-                AND CREATE <br /> SOME STUFF <br /> TOGETHER
-              </p>
-            </div>
-          </div>
+    <footer className="py-8 px-2 md:px-20  bg-(--color-secondary) text-(--color-secondary-fg) rounded-t-(--card-border-radius) mt-16">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-[70%_30%] gap-8 gri space-y-5 md:space-y-0">
+        <div className="flex flex-col justify-start items-center md:items-start">
+          <h2 className="text-6xl tracking-tighter text-center md:text-left craftr1 mb-12">
+            Ready to bring your <br /> <span className="italic Neue">ideas to life?</span>
+          </h2>
+          <Button dark={false}/>
         </div>
-
-        <div className="py-6 flex justify-between text-[0.7em] sm:text-[1em] items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center md:text-left space-y-6 md:space-y-0">
           <div>
-            <p>
-              © 2025{" "}
-              <a href="https://craftr-studio.vercel.app/">Craftr Studio</a>
-            </p>
+            <h3 className="text-xl font-medium mb-4 Founders">Work</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="transition-colors Founders">
+                  AutoCAD
+                </a>
+              </li>
+              <li>
+                <a href="#" className="transition-colors Founders">
+                  Engineering Solutions
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className="flex flex-col sm:flex-row sm:gap-4 mr-0 lg:mr-10">
-            <p>Facebook</p>
-            <p>LinkedIn</p>
-            <p>Instagram</p>
+          <div>
+            <h3 className="text-xl font-medium mb-4 Founders">Connect</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="transition-colors Founders">
+                  Email
+                </a>
+              </li>
+              <li>
+                <a href="#" className="transition-colors Founders">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" className="transition-colors Founders">
+                  Instagram
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-12 text-center text-sm craftr4">
+        © {new Date().getFullYear()} Umar Feroz. All rights reserved.
       </div>
     </footer>
   )

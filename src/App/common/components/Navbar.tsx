@@ -1,70 +1,52 @@
-import { useState } from "react"
-// import { navLinks } from "@/Utils/constants"
-import { FaBars, FaTimes } from "react-icons/fa"
 import { Button } from "./index"
-
 export function Navbar() {
-  // const [openDropdown, setOpenDropdown] = useState<null | number>(null)
-  const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <nav className="absolute mix-difference backdrop-blur-xs top-0 left-1/2 w-full py-4 z-50 -translate-x-1/2 ">
-      <div className="flex items-center justify-between text-(--color-primary) px-6 py-2">
-        <h2 className="">Menu</h2>
-        <h1 className="text-center font-bold text-xl leading-[0.9]">
-          UMAR <br /> FEROZ.
-        </h1>
+    <nav className="sticky Founders top-8 bg-[var(--color-paper-fg)] mb-8 left-0 right-0 z-50  p-4 rounded-[var(--border-radius)] shadow-lg">
+      <div className="container mx-6 flex justify-between items-center">
+        {/* Title on the left */}
+        <div className="font-medium text-xl Founders">
+          Umar{" "}
+          <span className="inline-block size-1 rounded-full bg-[var(--color-secondary)] mb-[5px]"></span>{" "}
+          Feroz
+        </div>
 
-        <button
-          className="md:hidden text-2xl "
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        {/* Navigation links on the right */}
+        <div className="hidden md:flex space-x-6 justify-center items-center mx-6">
+          <a href="#" className="hover:font-medium transition-all">
+            Home
+          </a>
+          <a href="#" className="hover:font-medium transition-all">
+            Work
+          </a>
+          <Button dark={true} />
+        </div>
 
-        {/* <ul className="hidden md:flex gap-6">
-          {navLinks.map((link, idx) => (
-            <li key={idx} className="relative group">
-              
-              {!link.dropdown ? (
-                <a href={link.href} className="font-medium transition-colors">
-                  {link.name}
-                </a>
-              ) : (
-                <button
-                  onClick={() =>
-                    setOpenDropdown(openDropdown === idx ? null : idx)
-                  }
-                  className="flex items-center gap-1 font-medium transition-colors"
-                >
-                  {link.name}
-                  <FaChevronDown
-                    size={16}
-                    className={`transition-transform duration-200 ${
-                      openDropdown === idx ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-              )}
-
-              {link.dropdown && openDropdown === idx && (
-                <ul className="absolute left-0 mt-2 w-48 bg-(--color-paper) border  rounded-md shadow-lg">
-                  {link.dropdown.map((item, i) => (
-                    <li key={i}>
-                      <a
-                        href={item.href}
-                        className="block px-4 py-2 "
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul> */}
-        <Button name={"Contact Us"} theme={"dark"} />
+        {/* Mobile menu button (hamburger icon) */}
+        <div className="md:hidden">
+          <button className=" focus:outline-none">
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      {/* Mobile menu (hidden by default, can be toggled with JavaScript) */}
+      {/* <div className="md:hidden mt-2">
+        <a href="#" className="block   px-3 py-2 rounded-md">Home</a>
+        <a href="#" className="block   px-3 py-2 rounded-md">Work</a>
+        <a href="#" className="block  bg-blue-600 hover:bg-blue-700 px-3 py-2 rounded-md mt-1">Book a free call</a>
+      </div> */}
     </nav>
   )
 }

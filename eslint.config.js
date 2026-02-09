@@ -15,10 +15,6 @@ export default tseslint.config([
       sourceType: 'module',
       globals: globals.browser,
       parser: tseslint.parser,
-      parserOptions: {
-        project: './tsconfig.json',
-        tsconfigRootDir: process.cwd(),
-      },
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,

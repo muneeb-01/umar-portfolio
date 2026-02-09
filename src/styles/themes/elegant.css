@@ -1,67 +1,56 @@
 @theme {
-    /* --- Elegant Monochrome Palette --- */
-    --color-elegant-50:  #F8F7F4;
-    --color-elegant-100: #FFFFFF;
-    --color-elegant-200: #e5e5e5;
-    --color-elegant-300: #cccccc;
-    --color-elegant-400: #999999;
-    --color-elegant-500: #777777;
-    --color-elegant-600: #AEAEAE;
-    --color-elegant-700: #333333;
-    --color-elegant-800: #081A26;  
-    --color-elegant-900: #121212;
-    --color-elegant-950: #000000;
+  /* --- Elegant Monochrome Palette --- */
+  --color-elegant-50: #ebe9df; /* Background */
+  --color-elegant-100: #f5f4f4; /* Card Background */
+  --color-elegant-200: #d1d5dc;
+  --color-elegant-300: #;
+  --color-elegant-400: #;
+  --color-elegant-500: #;
+  --color-elegant-600: #;
+  --color-elegant-700: #;
+  --color-elegant-800: #;
+  --color-elegant-900: #;
+  --color-elegant-950: #151410; /* Dark Background */
 }
 
 @layer base {
-    /* ========== LIGHT THEME ========== */
-    .theme-elegant {
-        --color-primary: var(--color-elegant-800);
-        --color-primary-fg: var(--color-elegant-100);
+  /* ========== LIGHT THEME ========== */
+  .theme-elegant {
+    --color-primary: var();
+    --color-primary-fg: var();
 
-        --color-secondary: var(--color-elegant-950);
-        --color-secondary-fg: var(--color-elegant-50);
+    --color-secondary: var(--color-elegant-950);
+    --color-secondary-fg: var(--color-elegant-50);
 
-        --color-tertiary: var(--color-elegant-200);
-        --color-tertiary-fg: var(--color-elegant-700);
+    --color-tertiary: var();
+    --color-tertiary-fg: var();
 
-        --color-paper: var(--color-elegant-100);
-        --color-paper-hover: var(--color-elegant-200);
-        --color-paper-fg: var(--color-elegant-50);
-        --color-paper-heading: var(--color-elegant-900);
+    --color-paper: var(--color-elegant-50);
+    --color-paper-hover: var();
+    --color-paper-fg: var(--color-elegant-100);
+    --color-paper-heading: var();
 
-        --color-hover: var(--color-secondary);
-        --color-focus: var(--color-secondary);
-        --color-disabled: var(--color-paper);
-        --color-disabled-border: var(--color-tertiary-fg);
+    --color-hover: var();
+    --color-focus: var(--color-elegant-200);
+    --color-disabled: var();
+    --color-disabled-border: var();
+  }
 
-        /* Button gradient for light mode */
-        --color-btn-gradient-from: var(--color-elegant-400);
-        --color-btn-gradient-to: var(--color-elegant-700);
+  /* ========== DARK THEME ========== */
+  .theme-elegant.dark {
+    --color-tertiary: var();
+    --color-tertiary-fg: var();
 
-         /* Text selection color (light mode) */
-        --color-selection-bg: var(--color-elegant-300);
-        --color-selection-fg: var(--color-elegant-950);
-    }
+    --color-paper: var();
+    --color-paper-fg: var();
+    --color-paper-heading: var();
 
-    /* ========== DARK THEME ========== */
-    .theme-elegant.dark {
-        --color-tertiary: var(--color-elegant-800);
-        --color-tertiary-fg: var(--color-elegant-200);
-
-        --color-paper: var(--color-elegant-950);
-        --color-paper-fg: var(--color-elegant-50);
-        --color-paper-heading: var(--color-elegant-100);
-
-        --color-disabled: var(--color-paper);
-        --color-disabled-border: var(--color-tertiary-fg);
-
-        --color-selection-bg: var(--color-elegant-400);
-        --color-selection-fg: var(--color-elegant-950);
-    }
+    --color-disabled: var();
+    --color-disabled-border: var();
+  }
 }
 
 .theme-elegant ::selection {
-        background: var(--color-selection-bg);
-        color: var(--color-selection-fg);
-    }
+  background: var();
+  color: var();
+}

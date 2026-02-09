@@ -1,9 +1,6 @@
 import { useEffect } from "react"
 import Lenis from "lenis"
-import Home from "@/App/Pages/Home/Home"
-import { ContactSection, Navbar, Footer } from "@/App/common/components/index"
-import { ScrollProgress } from "@/App/common/components/index"
-
+import Home from "./Pages/Home/Home"
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
@@ -24,12 +21,8 @@ const App = () => {
 
   return (
     <>
-      <section className="relative">
-        <Navbar />
-        <Home />
-        <ContactSection />
-        <ScrollProgress />
-        <Footer />
+      <section className="relative md:w-[70vw] w-[90vw] mx-auto">
+        <Home/>
       </section>
     </>
   )

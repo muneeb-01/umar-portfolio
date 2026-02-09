@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @font-face {
   font-family: "craftr1";
-  src: url("./assets/Fonts/craftr1.woff2");
+  src: url("./assets/Fonts/craftr1.ttf");
 }
 @font-face {
   font-family: "Founders";
@@ -17,8 +17,6 @@
 }
 
 @import "./styles/themes/elegant.css";
-@import "./styles/App/Home/Blob.css";
-@import "./styles/App/Home/ScrollRevealClip.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -37,14 +35,16 @@
     --color-warning: var(--color-yellow-600);
     --color-warning-fg: var(--color-yellow-200);
     --container-roundness: clamp(1em, 3vw, 1em);
+    --border-radius: clamp(1.5em, 2vw, 2em);
+    --card-border-radius: clamp(0.8em, 3vw, 1em);
   }
   :root.dark {
     --color-warning: var(--color-yellow-400);
   }
 
   body {
-    font-family: var(--font-Neue);
-    background-color: var(--color-paper-fg);
+    font-family: var(--font-Founders);
+    background-color: var(--color-paper);
     color: var(--color-primary);
     overflow-x: hidden;
     @apply font-light;
