@@ -28,7 +28,7 @@ const Model = () => {
   const groupRef = useRef<any>(null)
 
   // Continuous rotation
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (groupRef.current) {
       groupRef.current.rotation.y += delta * 0.5 // Adjust speed (0.5 = moderate)
     }
@@ -46,7 +46,7 @@ useGLTF.preload("/model.glb")
 
 export function ModelViewer() {
   const [isMobile, setIsMobile] = useState(false)
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const [_dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   // Detect mobile and update dimensions
   useEffect(() => {
