@@ -25,11 +25,6 @@
     --color-focus: var(--color-elegant-200);
   }
 
-  /* ========== DARK THEME ========== */
-  .theme-elegant.dark {
-    --color-secondary: var(--color-elegant-50);
-    --color-secondary-fg: var(--color-elegant-950);
-  }
 }
 .theme-elegant ::selection {
   background-color: var(--color-elegant-200);
