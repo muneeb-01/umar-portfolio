@@ -16,7 +16,63 @@
   src: url("./assets/Fonts/craftr4.ttf");
 }
 
-@import "./styles/themes/elegant.css";
+@theme {
+  /* --- Elegant Monochrome Palette --- */
+  --color-elegant-50: #ebe9df; /* Background */
+  --color-elegant-100: #f5f4f4; /* Card Background */
+  --color-elegant-200: #d1d5dc;
+  --color-elegant-300: #0000;
+  --color-elegant-400: #0000;
+  --color-elegant-500: #0000;
+  --color-elegant-600: #0000;
+  --color-elegant-700: #0000;
+  --color-elegant-800: #0000;
+  --color-elegant-900: #0000;
+  --color-elegant-950: #151410; /* Dark Background */
+}
+
+@layer base {
+  /* ========== LIGHT THEME ========== */
+  .theme-elegant {
+    --color-primary: var();
+    --color-primary-fg: var();
+
+    --color-secondary: var(--color-elegant-950);
+    --color-secondary-fg: var(--color-elegant-50);
+
+    --color-tertiary: var();
+    --color-tertiary-fg: var();
+
+    --color-paper: var(--color-elegant-50);
+    --color-paper-hover: var();
+    --color-paper-fg: var(--color-elegant-100);
+    --color-paper-heading: var();
+
+    --color-hover: var();
+    --color-focus: var(--color-elegant-200);
+    --color-disabled: var();
+    --color-disabled-border: var();
+  }
+
+  /* ========== DARK THEME ========== */
+  .theme-elegant.dark {
+    --color-tertiary: var();
+    --color-tertiary-fg: var();
+
+    --color-paper: var();
+    --color-paper-fg: var();
+    --color-paper-heading: var();
+
+    --color-disabled: var();
+    --color-disabled-border: var();
+  }
+}
+
+.theme-elegant ::selection {
+  background: var();
+  color: var();
+}
+
 
 @custom-variant dark (&:where(.dark, .dark *));
 
