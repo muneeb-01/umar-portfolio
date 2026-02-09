@@ -16,41 +16,22 @@
 @layer base {
   /* ========== LIGHT THEME ========== */
   .theme-elegant {
-    --color-primary: var();
-    --color-primary-fg: var();
-
     --color-secondary: var(--color-elegant-950);
     --color-secondary-fg: var(--color-elegant-50);
 
-    --color-tertiary: var();
-    --color-tertiary-fg: var();
-
     --color-paper: var(--color-elegant-50);
-    --color-paper-hover: var();
     --color-paper-fg: var(--color-elegant-100);
-    --color-paper-heading: var();
 
-    --color-hover: var();
     --color-focus: var(--color-elegant-200);
-    --color-disabled: var();
-    --color-disabled-border: var();
   }
 
   /* ========== DARK THEME ========== */
   .theme-elegant.dark {
-    --color-tertiary: var();
-    --color-tertiary-fg: var();
-
-    --color-paper: var();
-    --color-paper-fg: var();
-    --color-paper-heading: var();
-
-    --color-disabled: var();
-    --color-disabled-border: var();
+    --color-secondary: var(--color-elegant-50);
+    --color-secondary-fg: var(--color-elegant-950);
   }
 }
-
 .theme-elegant ::selection {
-  background: var();
-  color: var();
+  background-color: var(--color-elegant-200);
+  color: var(--color-elegant-950);
 }
