@@ -72,7 +72,7 @@ export function ModelViewer() {
   }
 
   return (
-    <div className="w-full h-screen bg-transparent">
+    <div className="w-full h-96 md:h-screen ">
       <Canvas
         camera={cameraSettings as any}
         dpr={[1, 2]} // Pixel ratio: min 1, max 2 for performance
@@ -86,7 +86,7 @@ export function ModelViewer() {
 
         <OrbitControls
           enableZoom={false} // Disable zoom on mobile
-          enablePan={false}
+          enablePan={!isMobile}
           minDistance={50}
           maxDistance={200}
           // Smoother controls on mobile

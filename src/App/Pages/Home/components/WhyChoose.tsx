@@ -39,7 +39,7 @@ export function WhyChooseSection() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.4 },
+      { threshold: 0.1 },
     )
 
     if (sectionRef.current) {
