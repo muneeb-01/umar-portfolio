@@ -5,7 +5,7 @@ const clientTypes = [
   "Small Businesses",
   "Startups",
   "Event Planners",
-  "Ecommerce Businesses",
+  "Businesses",
   "Agencies",
   "Personal Brands",
 ]

@@ -1,7 +1,7 @@
 import { ModelViewer } from "./ModelViewer"
 export function MissionSection() {
   return (
-    <section className=" mx-auto px-6 lg:px-12 mt-16 relative z-10 bg-(--color-paper-fg) rounded-(--card-border-radius) overflow-hidden">
+    <section className="mx-auto px-6 lg:px-12 relative z-10 bg-(--color-paper-fg) rounded-(--card-border-radius) overflow-hidden">
       <div className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center min-h-[80vh]">
         <div className="h-full flex items-end ">
           <div className="space-y-8 lg:space-y-10 py-10">
